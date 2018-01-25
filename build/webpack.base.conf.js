@@ -13,7 +13,8 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    "babel-polyfill":"babel-polyfill",//用来解决的兼容性
   },
   output: {
     path: config.build.assetsRoot,
