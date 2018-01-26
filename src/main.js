@@ -3,12 +3,17 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import {Button} from 'iview';
+import {Button,Input} from 'iview';
 import 'iview/dist/styles/iview.css';
 import '../theme/HHH.scss';
+import axios from './http/http'
 
 Vue.config.productionTip = false;
+/*iview按需引用*/
 Vue.component("Button",Button);
+Vue.component("Input",Input);
+/*axios*/
+Vue.prototype.$http = axios;
 
 /* eslint-disable no-new */
 new Vue({
